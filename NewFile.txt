@@ -1,0 +1,63 @@
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 35 }
+];
+
+var sum=0;
+var count=0;
+
+function test(list){
+  for (let i = 0; i < list.length; i++) {
+    
+      sum += list[i].age;
+      count++;
+}
+return sum/count;
+
+}
+console.log(test(people));
+
+
+
+
+const books = [
+  { title: "The Catcher in the Rye", author: "J.D. Salinger" },
+  { title: "To Kill a Mockingbird", author: "Harper Lee" },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+  { title: "The Old Man and the Sea", author: "Ernest Hemingway" },
+  { title: "1984", author: "George Orwell" },
+  { title: "Animal Farm", author: "George Orwell" }
+];
+
+
+function getBooksByAuthor(book,auth){
+  for(let i=0;i<book.length;i++){
+  if(book[i].author==auth){
+    console.log(book[i].title)
+  }
+  }
+  
+}
+console.log(getBooksByAuthor(books,"Ernest Hemingway"));
+
+function test(){
+const cars = [
+  { make: "Toyota", model: "Corolla", year: 2010 },
+  { make: "Honda", model: "Accord", year: 2015 },
+  { make: "Ford", model: "Mustang", year: 2005 },
+  { make: "Chevrolet", model: "Camaro", year: 2020 },
+  { make: "Nissan", model: "Altima", year: 2012 }
+];
+
+//ascending order
+cars.sort((a,b)=>a.year-b.year);
+console.log(cars);
+//descending order
+cars.sort((a,b)=>b.year-a.year)
+console.log(cars);
+//sorting based on alphabets
+cars.sort((a, b) => a.make.localeCompare(b.make));
+console.log(cars);
+}
+test();
